@@ -1,0 +1,52 @@
+/* style.css */
+:root {
+    --primary: #00b4d8;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.border-dashed {
+    border-style: dashed !important;
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#dropZone {
+    transition: all 0.3s ease;
+}
+
+#dropZone.dragover {
+    background: rgba(0, 180, 216, 0.1);
+    border-color: var(--primary);
+}
+
+.file-pill {
+    transition: all 0.2s;
+}
+
+.transfer-bar {
+    height: 10px;
+    background: #222;
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.transfer-progress {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), #00ffcc);
+    transition: width 0.4s ease;
+}
